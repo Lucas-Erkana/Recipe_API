@@ -36,6 +36,23 @@ app.use(morgan('dev')); // 'dev' is a predefined format string
 app.use('/', userRoutes); // Mounting user routes at the root path
 app.use('/', recipeRoutes); // Mounting recipe routes at the root path
 
+// Middleware to handle 404 Not Found errors
+app.use((req, res, next) => {
+    const error = new Error('Route Not found, please check the spelling'); // Creating a new Error object with a message 'Not found'
+    error.status = 404;                  // Setting the status of the error to 404
+    next(error);                         // Passing the error to the next middleware (error handling middleware)
+});
+
+// Error handling middleware
+app.use((error, req, res, next) => {
+    res.status(error.status || 500);     // Setting the HTTP status for the response. Default to 500 if error status is not set
+    res.json({                           // Sending a JSON response
+        error: {
+            message: error.message       // Including the error message in the response
+        }
+    });
+});
+
 // Connect to the database and start the server
 connectDB().then(() => {
     app.listen(PORT, () => { // Starting the Express server
