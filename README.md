@@ -38,11 +38,11 @@ This project is a comprehensive backend solution for managing and sharing culina
 
 ### API Screenshot
 
-![Recipe Website API](https://github.com/Lucas-Erkana/recipe_website/assets/api_screenshot.png)
+
 
 ## Live Demo
 
-To see this project's live demo, please click [here](https://recipe-website-api-demo.com).
+To see this project's live demo, please click [here](https://famous-pear-rugby-shirt.cyclic.app/).
 
 ## 🛠 Built With <a name="built-with"></a>
 
