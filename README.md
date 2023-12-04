@@ -86,6 +86,7 @@ In order to run this project you need:
 - A MongoDB database
 - A code editor such as Visual Studio Code
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Setup
 
 To set up the Recipe Website API project, follow the steps below:
