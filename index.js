@@ -6,6 +6,7 @@ const mongoose = require('mongoose'); // Importing Mongoose for MongoDB interact
 const userRoutes = require('./routes/userRoutes'); // Importing routes for user-related operations
 const recipeRoutes = require('./routes/recipeRoutes'); // Importing routes for recipe-related operations
 const cors = require('cors'); // Importing CORS to enable cross-origin resource sharing
+const morgan = require('morgan');
 
 const app = express(); // Creating an instance of Express
 const PORT = process.env.PORT || 3000; // Setting the port number from environment variables or defaulting to 3000
@@ -27,6 +28,9 @@ const connectDB = async () => {
         process.exit(1); // Exiting the process in case of a connection error
     }
 };
+
+app.use(morgan('dev')); // 'dev' is a predefined format string
+
 
 // Use routes for handling paths
 app.use('/', userRoutes); // Mounting user routes at the root path
