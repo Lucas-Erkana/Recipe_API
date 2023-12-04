@@ -109,7 +109,7 @@ To set up the Recipe Website API project, follow the steps below:
 ```
 4.Set up your environment variables in a .env file based on the .env.example provided.
 ```sh
-MONGO_URL = mongodb+srv://recipebookwebsite:u1jxF2qU7UnFIKEi@cluster0.uzbzxft.mongodb.net/?retryWrites=true&w=majority
+MONGO_URL = mongodb+srv://lderkana21x:RonWJMdHqDqRnZsi@cluster0.qtlaqml.mongodb.net/?retryWrites=true&w=majority
 ```
 5.Start the server:
 ```sh
@@ -124,7 +124,7 @@ Sure, here's how you can include the "Usage" section in your `README.md` file to
 
 ## 💻 Usage <a name="usage"></a>
 
-After starting the server with `npm start`, you can use Postman to interact with the API. If you don't have Postman installed, you can use it directly in your browser [here](https://web.postman.co/workspace/My-Workspace~80c6c9a1-1856-44c4-8f45-dc93fabc7188/request/create?requestId=359ef886-fef6-46be-a481-46db2fe2b5e9).
+After starting the server with `npm start`, you can use Postman to interact with the API. If you don't have Postman agent installed, you can use it directly in your browser [here](https://web.postman.co/workspace/My-Workspace~80c6c9a1-1856-44c4-8f45-dc93fabc7188/request/create?requestId=359ef886-fef6-46be-a481-46db2fe2b5e9).
 
 ### To CREATE a User:
 
