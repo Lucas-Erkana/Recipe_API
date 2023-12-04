@@ -38,6 +38,7 @@ This project is a comprehensive backend solution for managing and sharing culina
 
 ### API Screenshot
 
+![Recipe API](https://github.com/Lucas-Erkana/Recipe_API/assets/41428579/548917c2-0453-435e-871e-571d81f87790)
 
 
 ## Live Demo
