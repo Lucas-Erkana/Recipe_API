@@ -38,6 +38,7 @@ This project is a comprehensive backend solution for managing and sharing culina
 
 ### API Screenshot
 
+![Recipe API](https://github.com/Lucas-Erkana/Recipe_API/assets/41428579/548917c2-0453-435e-871e-571d81f87790)
 
 
 ## Live Demo
@@ -86,6 +87,7 @@ In order to run this project you need:
 - A MongoDB database
 - A code editor such as Visual Studio Code
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Setup
 
 To set up the Recipe Website API project, follow the steps below:
@@ -126,7 +128,9 @@ Sure, here's how you can include the "Usage" section in your `README.md` file to
 
 After starting the server with `npm start`, you can use Postman to interact with the API. If you don't have Postman agent installed, you can use it directly in your browser [here](https://web.postman.co/workspace/My-Workspace~80c6c9a1-1856-44c4-8f45-dc93fabc7188/request/create?requestId=359ef886-fef6-46be-a481-46db2fe2b5e9).
 
-### To CREATE a User:
+### To CREATE:
+<details>
+<summary>Add a User</summary>
 
 1. Set the request type to `POST`.
 2. Enter the URL: `http://localhost:3000/users`.
@@ -141,23 +145,78 @@ After starting the server with `npm start`, you can use Postman to interact with
     }
     ```
 5. Click `Send`.
+</details>
 
-### To READ Users:
+<details>
+<summary>Add a Recipe</summary>
 
-- To fetch all users:
+1. Set the request type to `POST`.
+2. Enter the URL: `http://localhost:3000/recipes`.
+3. Click on `Body`, then select `raw` and choose `JSON`.
+4. Add the following recipe details in the request body:
+    ```json
+       {
+        "nutritionalInfo": {
+            "calories": 350,
+            "fat": 15,
+            "protein": 25
+        },
+        "title": "Beef and Broccoli",
+        "description": "A savory and quick stir-fry dish combining tender strips of beef with fresh broccoli florets, served with a rich, garlic-infused sauce.",
+        "ingredients": [
+            "500g beef sirloin, thinly sliced,2 heads of broccoli, cut into florets,2 tbsp vegetable oil,3 cloves garlic, minced,1 tbsp ginger, grated,1/4 cup oyster sauce,2 tbsp soy sauce,1/2 cup beef broth,1 tsp cornstarch,1 tbsp water,Salt and pepper to taste"
+        ],
+        "instructions": "Marinate beef in a mixture of soy sauce and cornstarch. Heat oil in a wok and stir-fry beef until browned. Remove beef and add broccoli, garlic, and ginger. Stir-fry until broccoli is tender. Return beef to the wok. Mix oyster sauce, beef broth, and cornstarch slurry, then add to the wok. Stir until the sauce thickens. Season with salt and pepper. Serve with rice or noodles.",
+        "prepTime": 15,
+        "cookTime": 10,
+        "servings": 5,
+        "cuisine": "Chinese",
+        "course": "Main",
+        "images": [
+            "https://omnivorescookbook.com/wp-content/uploads/2022/05/220503_Beef-And-Broccoli_550.jpg"
+        ],
+        "author": "Chef John Doe",
+        "dateCreated": "2023-11-27T10:50:03.687Z",
+        "ratings": [
+            {
+                "rating": 5,
+                "review": "Delicious and easy to make!",
+                "_id": "6564dfebc0052d34336882fe"
+            },
+            {
+                "rating": 4,
+                "review": "Loved the flavors, though a bit too salty for my taste.",
+                "_id": "6564dfebc0052d34336882ff"
+            }
+        ]
+    }
+    ```
+5. Click `Send`.
+</details>
+
+### To READ:
+
+<details>
+<summary>Read Users or Recipes</summary>
+
+- To fetch all users or recipes:
   1. Set the request type to `GET`.
-  2. Enter the URL: `http://localhost:3000/users`.
+  2. Enter the URL: `http://localhost:3000/users` or `http://localhost:3000/recipes`.
   3. Click `Send`.
 
-- To fetch a specific user:
+- To fetch a specific user or recipe:
   1. Set the request type to `GET`.
-  2. Enter the URL: `http://localhost:3000/users/[user-id]` (replace `[user-id]` with the actual user ID).
+  2. Enter the URL: `http://localhost:3000/users/[user-id]` or `http://localhost:3000/recipes/[recipe-id]`.
   3. Click `Send`.
+</details>
 
-### To UPDATE a User:
+### To UPDATE:
+
+<details>
+<summary>Update a User</summary>
 
 1. Set the request type to `PUT`.
-2. Enter the URL: `http://localhost:3000/users/[user-id]` (replace `[user-id]` with the user ID you want to update).
+2. For User: Enter the URL: `http://localhost:3000/users/[user-id]`.
 3. In the `Body` section, select `raw` and choose `JSON`.
 4. Add the updated user details. For example:
     ```json
@@ -166,12 +225,40 @@ After starting the server with `npm start`, you can use Postman to interact with
     }
     ```
 5. Click `Send`.
+</details>
 
-### To DELETE a User:
+<details>
+<summary>Update a Recipe</summary>
+
+1. Set the request type to `PUT`.
+2. For User: Enter the URL: `http://localhost:3000/recipes/[recipe-id]`.
+3. In the `Body` section, select `raw` and choose `JSON`.
+4. Add the updated recipe details. For example:
+    ```json
+    {
+        "title": "Beef and Broccoli Stir-Fry" 
+    }
+    ```
+5. Click `Send`.
+</details>
+
+### To DELETE:
+
+<details>
+<summary>Delete a User </summary>
 
 1. Set the request type to `DELETE`.
-2. Enter the URL: `http://localhost:3000/users/[user-id]` (replace `[user-id]` with the user ID you want to delete).
+2. For User: Enter the URL: `http://localhost:3000/users/[user-id]`.
 3. Click `Send`.
+</details>
+
+<details>
+<summary>Delete a Recipe</summary>
+
+1. Set the request type to `DELETE`.
+2. For Recipe: Enter the URL: `http://localhost:3000/recipes/[recipe-id]`.
+3. Click `Send`.
+</details>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
